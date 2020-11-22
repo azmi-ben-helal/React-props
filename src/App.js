@@ -1,25 +1,24 @@
-import logo from './logo.svg';
-import './App.css';
-
+import logo from './logo.svg'
+import './App.css'
+import Profile from './Profile/Profile'
+import image from './images/test.jpg'
 function App() {
+  let data = {
+    fullName: 'Azmi ben helal',
+    bio: 'coucou',
+    profession: 'ingenieur',
+  }
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
+    <>
+      <Profile
+        fullName={data.fullName}
+        bio={data.bio}
+        profession={data.profession}
+      >
+        {image}
+      </Profile>
+    </>
+  )
 }
 
-export default App;
+export default App
